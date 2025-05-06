@@ -17,10 +17,10 @@ export default function Home() {
 					</span>
 				</div>
 				<nav className='space-x-6 text-sm font-medium'>
-					<Link href='#'>Home</Link>
-					<Link href='#about'>About</Link>
-					<Link href='#projects'>Projects</Link>
-					<Link href='#contact'>Contact</Link>
+					<Link href='/'>Home</Link>
+					<Link href='about'>About</Link>
+					<Link href='projects'>Projects</Link>
+					<Link href='contact'>Contact</Link>
 				</nav>
 			</header>
 
