@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
-import Carousel from './components/cards/carousel';
-import Cardsection from './components/cards/cardsection';
+import Cardsection from '../components/cards/cardsection';
+import Nav from '../components/nav/page';
 
 export default function Home() {
 	return (
@@ -11,26 +11,8 @@ export default function Home() {
 				<title>Red Hat Architects</title>
 			</Head>
 
-			<header className='flex justify-between items-center px-8 py-4 shadow-md bg-white'>
-				<div className='flex items-center space-x-2'>
-					<div className='bg-red-600 w-12 h-12'>
-            <Image
-              src='/logo-RedHatArchitects.jpg'
-              alt='Red Hat Architects'
-              width={100}
-              height={100}
-            />
-          </div>
-					<span className='text-xl font-bold'>
-						Red Hat Architects
-					</span>
-				</div>
-				<nav className='space-x-6 text-sm font-medium'>
-					<Link href='/'>Home</Link>
-					<Link href='about'>About</Link>
-					<Link href='projects'>Projects</Link>
-					<Link href='contact'>Contact</Link>
-				</nav>
+			<header>
+				<Nav />
 			</header>
 			<main>
 				<div className='flex m-4'>
