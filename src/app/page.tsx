@@ -1,94 +1,180 @@
-import Image from 'next/image';
-import Head from 'next/head';
+import { Search, Package, Puzzle, PackageOpen, Code } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import Link from 'next/link';
-import Cardsection from '../components/cards/cardsection';
-import Nav from '../components/nav/page';
+import Image from 'next/image';
 
-export default function Home() {
+export default function HomePage() {
 	return (
-		<div>
-			<Head>
-				<title>Red Hat Architects</title>
-			</Head>
-
-			<header>
-				<Nav />
-			</header>
-			<main>
-				<div className='flex m-4'>
-					<Cardsection />
-				</div>
-				<section className='relative h-[80vh] bg-gray-100 flex items-center justify-center text-white text-center'>
+		<div className='min-h-screen bg-white text-gray-900'>
+			<header className='w-full p-4 border-b flex items-center justify-between'>
+				<div className='text-2xl font-bold flex items-center gap-2'>
+					<span className='text-red-600'>
 					<Image
-						src='/modern-house.jpg'
-						alt='Modern House'
-						layout='fill'
-						objectFit='cover'
-						className='z-0'
+					src={'/RedHatArchitects-w.jpg'}
+					alt='Red Hat Architects'
+					width={50}
+					height={50}
 					/>
-					<div className='z-10 bg-black bg-opacity-50 p-6 rounded'>
-						<h1 className='text-4xl font-bold mb-4'>
-							AI-Powered Architectural Solutions
-						</h1>
-						<p className='mb-6'>
-							Harnessing Artificial Intelligence for Innovative
-							Design
-						</p>
-						<Link
-							href='#projects'
-							className='bg-red-600 text-white px-4 py-2 rounded'>
-							View Our Work
+					</span> RED HAT ARCHITECTS
+				</div>
+				<div className='flex items-center gap-6'>
+					<nav className='flex gap-4 text-sm'>
+						<Link href='#' className='hover:underline'>
+							Home
+						</Link>
+						<Link href='#' className='hover:underline'>
+							Browse
+						</Link>
+						<Link href='#' className='hover:underline'>
+							Requests
+						</Link>
+						<Link href='#' className='hover:underline'>
+							About
+						</Link>
+					</nav>
+					<div className='flex gap-3 text-sm'>
+						<Link href='/login' className='hover:underline'>
+							Login
+						</Link>
+						<Link href='/signup' className='hover:underline'>
+							Sign Up
 						</Link>
 					</div>
-				</section>
-				<section
-					id='projects'
-					className='px-8 py-12 bg-white grid md:grid-cols-2 gap-8'>
-					<div className='flex flex-col items-center text-center'>
-						<Image
-							src='/project-icon.png'
-							alt='Projects'
-							width={100}
-							height={100}
-						/>
-						<h2 className='text-2xl font-bold mt-4 mb-2'>
-							Projects
-						</h2>
-						<p>
-							Discover our portfolio of cutting-edge architectural
-							designs created with the power of AI
-						</p>
-					</div>
-					<div className='flex flex-col items-center text-center'>
-						<Image
-							src='/brain-icon.png'
-							alt='About AI'
-							width={100}
-							height={100}
-						/>
-						<h2 className='text-2xl font-bold mt-4 mb-2'>About</h2>
-						<p>
-							Learn more about our approach to integrating
-							artificial intelligence in the field of architecture
-						</p>
-					</div>
-				</section>
-				<section
-					id='contact'
-					className='bg-gray-100 px-8 py-12 text-center'>
-					<h2 className='text-2xl font-bold mb-2'>Get in Touch</h2>
-					<p className='mb-4'>
-						Interested in our AI-driven architectural services?
-						Reach out to us to discuss your project.
+				</div>
+			</header>
+
+			<main className='p-8 max-w-5xl mx-auto'>
+				<section className='text-center mb-12'>
+					<h1 className='text-4xl font-bold mb-4'>
+						Discover Architecture Software
+					</h1>
+					<p className='text-gray-600 mb-6'>
+						Buy and sell software, plugins, 3D objects, a+ and more
+						digital assets for architects.
 					</p>
-					<Link
-						href='#'
-						className='bg-red-600 text-white px-6 py-2 rounded'>
-						Contact Us
-					</Link>
+					<div className='flex justify-center'>
+						<div className='relative w-full max-w-xl'>
+							<Input
+								placeholder='Search for products...'
+								className='pr-10'
+							/>
+							<Search
+								className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400'
+								size={20}
+							/>
+						</div>
+					</div>
+					<section className='mb-12'>
+						<Image
+							src='/software-library-redhat.jpg'
+							width={7000}
+							height={7000}
+							alt='Hero Banner'
+							className='my-12 w-full h-96 object-cover'
+						/>
+					</section>
 				</section>
+				<section></section>
+
+				<section className='mb-12'>
+					<h2 className='text-2xl font-semibold mb-4'>Categories</h2>
+					<div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
+						{[
+							{ label: 'Software', icon: <Package /> },
+							{ label: 'Plugins', icon: <Puzzle /> },
+							{ label: '3D Objects', icon: <PackageOpen /> },
+							{ label: 'Scripts', icon: <Code /> },
+						].map((category) => (
+							<Card
+								key={category.label}
+								className='text-center p-4'>
+								<CardContent>
+									<div className='flex justify-center mb-2'>
+										{category.icon}
+									</div>
+									<div className='font-medium'>
+										{category.label}
+									</div>
+								</CardContent>
+							</Card>
+						))}
+					</div>
+				</section>
+
+				<section className='mb-12'>
+					<h2 className='text-2xl font-semibold mb-4'>
+						Featured Products
+					</h2>
+					<div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
+						{[
+							{
+								name: 'ArchitecturSoft',
+								price: '$49.00',
+								icon: <Package />,
+							},
+							{
+								name: 'Building Plugin',
+								price: '$19.00',
+								icon: <Puzzle />,
+							},
+							{
+								name: 'Modern House 3D',
+								price: '$79.00',
+								icon: <PackageOpen />,
+							},
+							{
+								name: 'AutoDesign Script',
+								price: '$29.00',
+								icon: <Code />,
+							},
+						].map((product) => (
+							<Card
+								key={product.name}
+								className='text-center p-4'>
+								<CardContent>
+									<div className='flex justify-center mb-2'>
+										{product.icon}
+									</div>
+									<div className='font-medium'>
+										{product.name}
+									</div>
+									<div className='text-sm text-gray-500'>
+										{product.price}
+									</div>
+								</CardContent>
+							</Card>
+						))}
+					</div>
+				</section>
+
+				<section className='text-center'>
+					<h3 className='text-xl font-semibold mb-2'>
+						Can't find what you need?
+					</h3>
+					<p className='text-gray-600 mb-4'>
+						Submit a request for the software or resources you're
+						looking for.
+					</p>
+					<Button className='bg-red-600 hover:bg-red-700'>
+						Submit Request
+					</Button>
+				</section>
+				<section></section>
 			</main>
-			<footer className='bg-red-600 h-2'></footer>
+
+			<footer className='border-t text-sm text-gray-500 p-4 text-center'>
+				<p>RED HAT ARCHITECTS LLC</p>
+				<div className='flex justify-center gap-4 mt-1'>
+					<Link href='#' className='hover:underline'>
+						Terms
+					</Link>
+					<Link href='#' className='hover:underline'>
+						Privacy
+					</Link>
+				</div>
+			</footer>
 		</div>
 	);
 }
