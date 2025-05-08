@@ -11,13 +11,14 @@ export default function HomePage() {
 			<header className='w-full p-4 border-b flex items-center justify-between'>
 				<div className='text-2xl font-bold flex items-center gap-2'>
 					<span className='text-red-600'>
-					<Image
-					src={'/RedHatArchitects-w.jpg'}
-					alt='Red Hat Architects'
-					width={50}
-					height={50}
-					/>
-					</span> RED HAT ARCHITECTS
+						<Image
+							src={'/RedHatArchitects-w.jpg'}
+							alt='Red Hat Architects'
+							width={50}
+							height={50}
+						/>
+					</span>{' '}
+					RED HAT ARCHITECTS
 				</div>
 				<div className='flex items-center gap-6'>
 					<nav className='flex gap-4 text-sm'>
@@ -154,7 +155,7 @@ export default function HomePage() {
 						Can&apos;t find what you need?
 					</h3>
 					<p className='text-gray-600 mb-4'>
-						Submit a request for the software or resources you're
+						Submit a request for the software or resources you&apos;re
 						looking for.
 					</p>
 					<Button className='bg-red-600 hover:bg-red-700'>
