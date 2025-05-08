@@ -151,7 +151,7 @@ export default function HomePage() {
 
 				<section className='text-center'>
 					<h3 className='text-xl font-semibold mb-2'>
-						Can't find what you need?
+						Can&apos;t find what you need?
 					</h3>
 					<p className='text-gray-600 mb-4'>
 						Submit a request for the software or resources you're
