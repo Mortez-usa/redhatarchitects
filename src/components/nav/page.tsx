@@ -27,19 +27,19 @@ export default function page() {
 				</div>
 				<div className='flex items-center gap-6'>
 					<nav className='flex gap-4 text-sm content-center justify-items-center items-center'>
-						<Link href='#' className='hover:underline'>
+						<Link href='home' className='hover:underline font-bold'>
 							Home
 						</Link>
-						<Link href='#' className='hover:underline'>
+						<Link href='browse' className='hover:underline'>
 							Browse
 						</Link>
-						<Link href='#' className='hover:underline'>
+						<Link href='requests' className='hover:underline'>
 							Requests
 						</Link>
-						<Link href='#' className='hover:underline'>
+						<Link href='pricing' className='hover:underline'>
 							Pricing
 						</Link>
-						<Link href='#' className='hover:underline'>
+						<Link href='about' className='hover:underline'>
 							About
 						</Link>
 						<div className='hover:underline'>
