@@ -14,6 +14,7 @@ export default function page() {
 	return (
 		<div className='flex justify-between items-center px-8 py-4 bg-white'>
 			<header className='w-full p-4 border-b flex items-center justify-between'>
+				<Link href={'/home'}>
 				<div className='text-2xl font-bold flex items-center gap-2'>
 					<span className='text-red-600'>
 						<Image
@@ -25,6 +26,7 @@ export default function page() {
 					</span>{' '}
 					RED HAT ARCHITECTS
 				</div>
+				</Link>
 				<div className='flex items-center gap-6'>
 					<nav className='flex gap-4 text-sm content-center justify-items-center items-center'>
 						<Link href='home' className='hover:underline font-bold'>
