@@ -1,4 +1,5 @@
 // import Home from './(pages)/home/page';
+//testing coming soon page
 
 export default function HomePage() {
 	return (
