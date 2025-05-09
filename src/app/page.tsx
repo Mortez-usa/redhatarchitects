@@ -32,15 +32,15 @@ export default function HomePage() {
 							Requests
 						</Link>
 						<Link href='#' className='hover:underline'>
+							Pricing
+						</Link>
+						<Link href='#' className='hover:underline'>
 							About
 						</Link>
 					</nav>
-					<div className='flex gap-3 text-sm'>
-						<Link href='/login' className='hover:underline'>
-							Login
-						</Link>
-						<Link href='/signup' className='hover:underline'>
-							Sign Up
+					<div className='text-sm'>
+						<Link href='/account' className='hover:underline'>
+							Account
 						</Link>
 					</div>
 				</div>
@@ -52,8 +52,8 @@ export default function HomePage() {
 						Discover Architecture Software
 					</h1>
 					<p className='text-gray-600 mb-6'>
-						Buy and sell software, plugins, 3D objects, a+ and more
-						digital assets for architects.
+						Enjoy safe and trusted architectural software, plugins,
+						3D objects, assets, and more
 					</p>
 					<div className='flex justify-center'>
 						<div className='relative w-full max-w-xl'>
@@ -106,7 +106,7 @@ export default function HomePage() {
 
 				<section className='mb-12'>
 					<h2 className='text-2xl font-semibold mb-4'>
-						Featured Products
+						Featured Apps
 					</h2>
 					<div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
 						{[
@@ -149,14 +149,71 @@ export default function HomePage() {
 						))}
 					</div>
 				</section>
+				<section className='mb-12'>
+					<h2 className='text-2xl font-semibold mb-4'>
+						Trending Categories
+					</h2>
+					<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+						{[
+							'Interoperability & Integration',
+							'AI-Driven Design Tools',
+							'Sustainability-Focused Software',
+							'Mobile Based Platforms',
+						].map((category) => (
+							<Card key={category} className='p-4'>
+								<CardContent className='text-center font-medium'>
+									{category}
+								</CardContent>
+							</Card>
+						))}
+					</div>
+				</section>
+				<section className='mb-12'>
+					<h2 className='text-2xl font-semibold mb-4'>
+						Top Paid Apps
+					</h2>
+					<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+						{[
+							'Free CAD Tools',
+							'Open Source Plugins',
+							'Community Contributed Scripts',
+							'Educational 3D Assets',
+						].map((item) => (
+							<Card key={item} className='p-4'>
+								<CardContent className='text-center font-medium'>
+									{item}
+								</CardContent>
+							</Card>
+						))}
+					</div>
+				</section>
+				<section className='mb-12'>
+					<h2 className='text-2xl font-semibold mb-4'>
+						Top Free Apps
+					</h2>
+					<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+						{[
+							'Free CAD Tools',
+							'Open Source Plugins',
+							'Community Contributed Scripts',
+							'Educational 3D Assets',
+						].map((item) => (
+							<Card key={item} className='p-4'>
+								<CardContent className='text-center font-medium'>
+									{item}
+								</CardContent>
+							</Card>
+						))}
+					</div>
+				</section>
 
 				<section className='text-center'>
 					<h3 className='text-xl font-semibold mb-2'>
 						Can&apos;t find what you need?
 					</h3>
 					<p className='text-gray-600 mb-4'>
-						Submit a request for the software or resources you&apos;re
-						looking for.
+						Submit a request for the software or resources
+						you&apos;re looking for.
 					</p>
 					<Button className='bg-red-600 hover:bg-red-700'>
 						Submit Request
