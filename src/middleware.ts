@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-
+// is protectedRoute is a function that checks if the request URL matches the given patterns
 const isProtectedRoute = createRouteMatcher(['/download(.*)']);
 
 
