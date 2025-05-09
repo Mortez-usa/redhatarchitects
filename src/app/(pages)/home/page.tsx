@@ -12,7 +12,7 @@ export default function page() {
   return (
 		<div>
 			<div className='min-h-screen bg-white text-gray-900'>
-				<header className='w-full p-4 border-b flex items-center justify-between'>
+				{/* <header className='w-full p-4 border-b flex items-center justify-between'>
 					<div className='text-2xl font-bold flex items-center gap-2'>
 						<span className='text-red-600'>
 							<Image
@@ -48,7 +48,7 @@ export default function page() {
 							</Link>
 						</div>
 					</div>
-				</header>
+				</header> */}
 
 				<main className='p-8 max-w-5xl mx-auto'>
 					<section className='text-center mb-12'>

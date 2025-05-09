@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/elements": "^0.23.24",
     "@clerk/nextjs": "^6.19.1",
+    "@heroui/react": "^2.7.8",
+    "@radix-ui/react-label": "^2.1.6",
     "@radix-ui/react-slot": "^1.2.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
