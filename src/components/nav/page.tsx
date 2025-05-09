@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
 	ClerkProvider,
-	SignInButton,
 	SignedIn,
 	SignedOut,
 	UserButton,
@@ -43,11 +42,13 @@ export default function page() {
 						<Link href='#' className='hover:underline'>
 							About
 						</Link>
-						<div className=' hover:underline'>
+						<div className='hover:underline'>
 							<ClerkProvider publishableKey={publishableKey}>
-								<div className='hover:underline'>
+								<div className='hover:underline cursor-pointer'>
 									<SignedOut>
-										<SignInButton />
+										<Link href='/sign-in'>
+											Sign in
+										</Link>
 									</SignedOut>
 									<SignedIn>
 										<UserButton showName />
